@@ -3,7 +3,7 @@
 
 #include <string>
 
-struct Productos {
+struct Producto {
     int idProducto;
     int calidad;   // Escala de 1 a 5
     int precio;

@@ -3,8 +3,9 @@
 
 #include "Productos.h"
 
+//Lista enlazada para el historial.
 struct Historial {
-    Productos* producto;
+    Producto* producto;
     Historial* siguiente;
 };
 

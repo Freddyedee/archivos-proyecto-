@@ -12,8 +12,8 @@ struct Usuario {
     std::string contrasena;
     int idUsuario;
 
-    Preferencia* preferencias; // ← esto va cuando definas la estructura
-    Historial* historial;
+    Preferencia* preferencias = nullptr; //Se inicializan los punteros nulos al trabajar con listas enlazadas
+    Historial* historial = nullptr; 
 };
 
 #endif // CORE_USUARIO_H
