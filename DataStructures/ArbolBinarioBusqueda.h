@@ -17,7 +17,8 @@ struct NodoABB{
 void insertarUsuario(NodoABB*&, Usuario*);
 Usuario* BuscarUsuario(NodoABB* , int); 
 void MostrarUsuariosINORDEN(NodoABB*);
-
+void EliminarUsuario(NodoABB*&, int);
+void LiberarArbol(NodoABB*& ); 
 
 
 

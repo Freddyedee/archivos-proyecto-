@@ -4,7 +4,7 @@
       "name": "Win32", // o "Win32" si estás en Windows
       "includePath": [
         "${workspaceFolder}/Core",
-        //"${workspaceFolder}/Logic",
+        "${workspaceFolder}/Logic",
         "${workspaceFolder}/DataStructures"
         //"${workspaceFolder}/Persistence"
       ],
