@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "name": "Win32", // o "Win32" si estás en Windows
+      "includePath": [
+        "${workspaceFolder}/Core"
+        //"${workspaceFolder}/Logic",
+        //"${workspaceFolder}/DataStructures",
+        //"${workspaceFolder}/Persistence"
+      ],
+      "defines": [],
+      "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64" // o "windows-gcc-x64"
+    }
+  ],
+  "version": 4
+}
