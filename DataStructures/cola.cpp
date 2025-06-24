@@ -1,4 +1,7 @@
 #include "cola.h"
+#include "../Core/Historial.h"  // Para Historial y NodoHistorial
+#include "../Core/Productos.h"  // Para Producto
+#include "../Core/Usuario.h"   // Para Usuario
 #include <iostream>
 
 // Añade un producto al final del historial (como cola FIFO)
