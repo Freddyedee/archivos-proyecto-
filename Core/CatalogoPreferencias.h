@@ -1,7 +1,7 @@
 //Definicion de el catalogo de preferencias desde el programa..
 
 #ifndef CORE_CATALOGO_PREFERENCIAS_H
-#define CORE_CATALOGO_PREFERENCIAS_h
+#define CORE_CATALOGO_PREFERENCIAS_H
 
 #include <string>
 #include <vector>
