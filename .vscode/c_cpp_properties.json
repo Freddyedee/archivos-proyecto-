@@ -5,8 +5,8 @@
       "includePath": [
         "${workspaceFolder}/Core",
         "${workspaceFolder}/Logic",
-        "${workspaceFolder}/DataStructures"
-        //"${workspaceFolder}/Persistence"
+        "${workspaceFolder}/DataStructures",
+        "${workspaceFolder}/src"
       ],
       "defines": [],
       "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
