@@ -1,0 +1,10 @@
+^C:\USERS\USER\DESKTOP\ARCHIVOS_PROYECTO\ARCHIVOS-PROYECTO-\TEST\BUILD\CMAKEFILES\B8A9E99476F602B25CAEC9428A4EA281\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/USER/Desktop/archivos_proyecto/archivos-proyecto-/test -BC:/Users/USER/Desktop/archivos_proyecto/archivos-proyecto-/test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/USER/Desktop/archivos_proyecto/archivos-proyecto-/test/build/TestUsuarios.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
