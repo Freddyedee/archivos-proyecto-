@@ -7,7 +7,7 @@
 struct NodoHistorial {
     Producto* producto;          // Puntero al producto
     NodoHistorial* siguiente;    // Puntero al siguiente nodo
-    NodoHistorial(Producto* prod) : producto(prod), siguiente(NULL) {}
+    NodoHistorial(Producto* prod) : producto(prod), siguiente(NULL) {} //justificar
 };
 
 // Estructura principal del historial (lista enlazada)
