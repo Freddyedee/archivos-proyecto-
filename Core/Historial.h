@@ -15,8 +15,6 @@ struct Historial {
     NodoHistorial* primero;      // Puntero al primer nodo
     int cantidad;                // Contador de elementos
 
-    Historial();  // Constructor
-    ~Historial(); // Destructor (declarado pero no definido)
 };
 
 #endif // CORE_HISTORIAL_H
