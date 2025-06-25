@@ -63,5 +63,6 @@
         "fstream": "cpp",
         "sstream": "cpp",
         "map": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/usuario/Documents/GitHub/archivos-proyecto-/test"
 }
