@@ -4,11 +4,15 @@
 #include <string>
 
 struct Producto {
-    int idProducto;
-    int calidad;   // Escala de 1 a 5
-    int precio;
+    
+    std::string descripcion;
     std::string marca;
     std::string categoria;
+    int id;
+    float precio;
+    int calidad; // Rango de 1 a 5
+
+    Producto* siguiente = nullptr; // Lista enlazada simple
 };
 
 #endif // CORE_PRODUCTO_H
