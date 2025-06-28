@@ -6,8 +6,8 @@
         "${workspaceFolder}/Core",
         "${workspaceFolder}/Logic",
         "${workspaceFolder}/DataStructures",
-        "${workspaceFolder}/Logic/Usuario_Manager" //Direccion de la subcarpeta de logic.
-        //"${workspaceFolder}/Logic/ProductoManager",
+        "${workspaceFolder}/Logic/Usuario_Manager", //Direccion de la subcarpeta de logic.
+        "${workspaceFolder}/Logic/HistorialManager"
       ],
       "defines": [],
       "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
