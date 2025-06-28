@@ -11,4 +11,10 @@ struct ColaHistorial {
     static bool estaVacia(const Historial* historialUsuario);
 };
 
+// Entradas
+/*
+encolar(Lavadora, Usuario.historial)
+desencolar(Usuario.historial) //
+estaVacia(Usuario.historial) //
+*/
 #endif // DATASTRUCTURES_COLA_H
