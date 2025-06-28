@@ -5,8 +5,9 @@
       "includePath": [
         "${workspaceFolder}/Core",
         "${workspaceFolder}/Logic",
-        "${workspaceFolder}/DataStructures"
-        //"${workspaceFolder}/Persistence"
+        "${workspaceFolder}/DataStructures",
+        "${workspaceFolder}/Logic/Usuario_Manager" //Direccion de la subcarpeta de logic.
+        //"${workspaceFolder}/Logic/ProductoManager",
       ],
       "defines": [],
       "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
