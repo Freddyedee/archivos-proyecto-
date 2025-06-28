@@ -1,33 +1,24 @@
 #include <iostream>
 #include "../Core/Usuario.h"
-#include "../DataStructures/ArbolBinarioBusqueda.h"  // Tu clase ABB
+#include "../DataStructures/ArbolBinarioBusqueda.h" 
+#include "../DataStructures/ListaEnlazadaProductos.h" // Tu clase ABB
 using namespace std;
 
 
 int main(){
 
-NodoABB* raiz = nullptr; // Inicializa el árbol vacío
-Usuario* u1 = new Usuario;
+Producto* catalogo = nullptr;
 
-cout << "Ingresa el nombre para el usuario: "  << endl; 
-cin >> u1->nombre; 
-cout << "Ingresa el apellido para el usuario: " << endl; 
-cin >> u1->apellido; 
-cout << "Ingresa el nombre de usuario para el usuario: " << endl ; 
-cin >> u1->usuario; 
-cout << "Ingresa la contraseña para el usuario: " << endl; 
-cin >> u1->contrasena; 
+AgregarProductos(catalogo, 101, "Smartphone Galaxy S20", "Samsung", 799.99, 5, "Electrónica");
+AgregarProductos(catalogo, 102, "Laptop Dell Inspiron", "Dell", 999.99, 4, "Electrónica");
 
-//insertar nodo 
+MostrarProductos (catalogo);
 
-insertarUsuario(raiz, u1); 
+Producto* p = BuscarProductoID(catalogo, 101);
+if (p) std::cout << "Producto encontrado: " << p->descripcion << std::endl;
 
-cout << "Usuario insertado (in order): " << endl; 
-MostrarUsuariosINORDEN(raiz); 
+LiberarProductos(catalogo);
 
-cout << "Presiona Enter para salir...";
-cin.get();
-cin.get();
 
 return 0; 
 }
