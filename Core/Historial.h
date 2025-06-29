@@ -3,17 +3,18 @@
 
 #include "Productos.h"
 
-// Nodo para la lista enlazada del historial
+//Cola circular
 const int TAMANO_COLA = 15;
 
 struct Historial{
-    int cola[TAMANO_COLA];
+    Producto cola[TAMANO_COLA];
     int frente = 0;
     int final = -1; // Inicializamos 'final' a -1 para una cola vacia
     int elementos = 0;
 };
 
 /*
+// Nodo para la lista enlazada del historial
 struct NodoHistorial {
     Producto* producto;          // Puntero al producto
 };

@@ -2,65 +2,57 @@
 #include <iostream>
 
 
-bool ColaHistorial:: estaLlena() {
-    return elementos == TAMANO_COLA;
+bool estaLlena(Historial* historialusuario) {
+    return historialusuario->elementos == TAMANO_COLA;
 }
 
-bool ColaHistorial::estaVacia() {
-    return elementos == 0;
+bool estaVacia(Historial* historialusuario) {
+    return historialusuario->elementos == 0;
 }
 
-void ColaHistorial::encolar(Producto* producto,Historial* historialusuario) {
-    if (estaLlena()) {
-        std::cout << "Cola llena, no se puede encolar.\n"<<std::endl;
-        return;
-    }
-    final = (final + 1) % TAMANO_COLA; // 'final' avanza a la siguiente posición
-    cola[final] = valor;             // Encolar en la nueva posición de 'final'
-    elementos++;
-    std::cout << "Elemento " << valor << " encolado.\n";
+void encolar(Producto* producto,Historial* historialusuario) {
+    historialusuario->final = (historialusuario->final + 1) % TAMANO_COLA; // 'final' avanza a la siguiente posición
+    historialusuario->cola[historialusuario->final] = *producto;             // Encolar en la nueva posición de 'final'
+    historialusuario->elementos++;
+    std::cout << "Elemento " << producto->marca << " encolado.\n";
 }
 
-void ColaHistorial::desencolar() {
-    if (estaVacia()) {
+void desencolar(Historial* historialusuario) {
+    if (estaVacia(historialusuario)) {
         std::cout << "Cola vacia, no se puede desencolar.\n";
         return;
     }
-    std::cout << "Elemento " << cola[frente] << " desencolado.\n";
-    cola[frente] = 0; // Se coloca el elemento a cero (opcional)
-    frente = (frente + 1) % TAMANO_COLA; // 'frente' avanza
-    elementos--;
+    std::cout << "Elemento " << historialusuario->cola[historialusuario->frente].marca << " desencolado.\n";
+    historialusuario->cola[historialusuario->frente] = Producto(); // Se coloca el elemento a cero (opcional)
+    historialusuario->frente = (historialusuario->frente + 1) % TAMANO_COLA; // 'frente' avanza
+    historialusuario->elementos--;
 }
 
-void ColaHistorial::verCola() {
-    if (estaVacia()) {
-        std::cout << "La cola esta vacia.\n";
-        return;
-    }
+void verCola(Historial* historialusuario) {
     std::cout << "Elementos en la cola:\n";
     std::cout << "Indice: ";
-    for (int i = 0; i < elementos; ++i) {
-        std::cout << (frente + i) % TAMANO_COLA << (i == elementos - 1 ? " " : "     ");
+    for (int i = 0; i < historialusuario->elementos; ++i) {
+        std::cout << (historialusuario->frente + i) % TAMANO_COLA << (i == historialusuario->elementos - 1 ? " " : "     ");
     }
     std::cout << std::endl;
     std::cout << "Valor:  ";
-    for (int i = 0; i < elementos; ++i) {
-        std::cout << cola[(frente + i) % TAMANO_COLA] << (i == elementos - 1 ? " " : " <- ");
+    for (int i = 0; i < historialusuario->elementos; ++i) {
+        std::cout << historialusuario->cola[(historialusuario->frente + i) % TAMANO_COLA].marca << (i == historialusuario->elementos - 1 ? " " : " <- ");
     }
     std::cout << std::endl;
 }
 
-void ColaHistorial::mostrarEstado() {
+void mostrarEstado(Historial* historialusuario) {
     std::cout << "Estado de la Cola:\n";
-    std::cout << "  Frente: " << frente << std::endl;
-    std::cout << "  Final:  " << final << std::endl;
-    std::cout << "  Elementos: " << elementos << std::endl;
+    std::cout << "  Frente: " << historialusuario->frente << std::endl;
+    std::cout << "  Final:  " << historialusuario->final << std::endl;
+    std::cout << "  Elementos: " << historialusuario->elementos << std::endl;
     
 }
 
-
+//No usado, son listas enlazadas y creo que es mejor cola circular
 /*// Añade un producto al final del historial (como cola FIFO)
-void ColaHistorial::encolar(Producto* producto, Historial* historialUsuario) {
+void encolar(Producto* producto, Historial* historialUsuario) {
     NodoHistorial* nuevoNodo = new NodoHistorial(producto);
 
     if (historialUsuario->primero == NULL) {
@@ -76,7 +68,7 @@ void ColaHistorial::encolar(Producto* producto, Historial* historialUsuario) {
 }
 
 // Elimina el producto más antiguo (frente de la cola)
-void ColaHistorial::desencolar(Historial* historialUsuario) {
+void desencolar(Historial* historialUsuario) {
     if (estaVacia(historialUsuario)) return;
 
     NodoHistorial* temp = historialUsuario->primero;
@@ -86,7 +78,7 @@ void ColaHistorial::desencolar(Historial* historialUsuario) {
 }
 
 // Verifica si el historial está vacío
-bool ColaHistorial::estaVacia(const Historial* historialUsuario) {
+bool estaVacia(const Historial* historialUsuario) {
     return historialUsuario->primero == NULL;
 }
 */

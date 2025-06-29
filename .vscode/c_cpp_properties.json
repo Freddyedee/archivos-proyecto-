@@ -7,12 +7,7 @@
         "${workspaceFolder}/Logic",
         "${workspaceFolder}/DataStructures",
         "${workspaceFolder}/Logic/Usuario_Manager", //Direccion de la subcarpeta de logic.
-        "${workspaceFolder}/Logic/HistorialManager",
-        "C:/Qt/6.9.0/mingw_64/include",
-        "C:/Qt/6.9.0/mingw_64/include/QtCore",
-        "C:/Qt/6.9.0/mingw_64/include/QtGui",
-        "C:/Qt/6.9.0/mingw_64/include/QtQuick",
-        "C:/Qt/6.9.0/mingw_64/include/QtQml"
+        "${workspaceFolder}/Logic/HistorialManager"
       ],
       "defines": [],
       "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
