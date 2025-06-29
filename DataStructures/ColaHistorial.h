@@ -3,13 +3,25 @@
 
 #include "../Core/Historial.h"  // Para Historial y NodoHistorial
 #include "../Core/Productos.h"  // Para Producto
+#include <iostream>
 
 struct ColaHistorial {
+    
     // Métodos que reciben un Historial* para modificarlo
-    static void encolar(Producto* producto, Historial* historialUsuario);
+
+    bool estaLlena(Historial* historialusuario);
+    bool estaVacia(Historial* historialusuario);
+    void encolar(Producto* producto,Historial* historialusuario);
+    void desencolar();
+    void verCola(); 
+    void mostrarEstado(); 
+
+
+    /*static void encolar(Producto* producto, Historial* historialUsuario);
     static void desencolar(Historial* historialUsuario);
-    static bool estaVacia(const Historial* historialUsuario);
+    static bool estaVacia(const Historial* historialUsuario);*/
 };
+
 
 // Entradas
 /*
