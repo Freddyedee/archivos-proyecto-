@@ -4,10 +4,6 @@
 #include "../../DataStructures/ListaEnlazadaPreferencias.h"  // Para Preferencias
 #include "../../Core/Usuario.h"
 
-    void AgregarPreferenciaUsuario(Preferencia* preferencia);
-    void EliminarPreferenciaUsuario(Preferencia* preferencia);
-    bool ValidarPreferenciaConCatalogo(Preferencia* prefencia);
-    void MostrarPreferenciaUsuario(Preferencia* preferencia);
-    void RecomendacionesPorPreferencias(Preferencia* preferencia);
+    void RecomendacionesPorPreferencias(Preferencia* preferencias, Producto* catalogo);
 
 #endif // DATASTRUCTURES_COLA_H
