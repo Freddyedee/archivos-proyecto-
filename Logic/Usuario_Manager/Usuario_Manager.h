@@ -2,7 +2,6 @@
 #define LOGIC_USUARIOMANAGER_H
 
 
-#include "../../Core/Usuario.h"
 #include "../../DataStructures/ArbolBinarioBusqueda.h"
 #include <string>
 

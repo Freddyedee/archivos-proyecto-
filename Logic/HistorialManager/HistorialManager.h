@@ -3,7 +3,7 @@
 
 #include "../../DataStructures/ColaHistorial.h"
 
-void AgregarAlHistorial(Producto* Producto, Historial* historialusuario);
+  void AgregarAlHistorial(Producto* Producto, Historial* historialusuario);
 void LimpiarHistorial(Historial* historialusuario);
 
 //void MostrarHistorial(Historial historialusuario);

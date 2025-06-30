@@ -5,12 +5,12 @@
 #include <string>
 
 
-void AgregarPreferencia(Preferencia*& cabeza, const std::string& tipo, const std::string& valor); 
-void mostrarPreferencias(const Preferencia* cabeza); 
-void LiberarPreferencia(Preferencia*& cabeza); 
-bool buscarPreferencia(const Preferencia* cabeza, const std::string& tipo, const std::string& valor); 
-bool EliminarPreferencia(Preferencia*& cabeza, const std::string& tipo, const std::string& valor); 
-int  ContarPreferencias(const Preferencia* cabeza);
+void AgregarPreferencia(Preferencia* preferencia); 
+void mostrarPreferencias(Preferencia* preferencia); 
+void LiberarPreferencia(Preferencia* preferencia); 
+bool buscarPreferencia(Preferencia* preferencia); 
+bool EliminarPreferencia(Preferencia* preferencia); 
+int  ContarPreferencias(Preferencia* preferencia);
 
 
 #endif //DATASTRUCTURES_LISTAENLAZADA_H
