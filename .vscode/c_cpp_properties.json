@@ -1,19 +1,28 @@
 {
   "configurations": [
     {
-      "name": "Win32", // o "Win32" si estás en Windows
+      "name": "Win32",
       "includePath": [
         "${workspaceFolder}/Core",
         "${workspaceFolder}/Logic",
+        "${workspaceFolder}/Logic/Usuario_Manager",
+        "${workspaceFolder}/Logic/HistorialManager",
         "${workspaceFolder}/DataStructures",
-        "${workspaceFolder}/Logic/Usuario_Manager", //Direccion de la subcarpeta de logic.
-        "${workspaceFolder}/Logic/HistorialManager"
+        "${workspaceFolder}/interface",
+
+        // 🔽 Agrega estos para Qt
+        "C:/Qt/6.9.1/mingw_64/include",
+        "C:/Qt/6.9.1/mingw_64/include/QtCore",
+        "C:/Qt/6.9.1/mingw_64/include/QtGui",
+        "C:/Qt/6.9.1/mingw_64/include/QtQml",
+        "C:/Qt/6.9.1/mingw_64/include/QtQuick"
+          // si usas red
       ],
       "defines": [],
-      "compilerPath": "C:/MinGW/bin/g++.exe" , // ajusta si estás en Windows
+      "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
       "cStandard": "c11",
       "cppStandard": "c++17",
-      "intelliSenseMode": "windows-gcc-x64" // o "windows-gcc-x64"
+      "intelliSenseMode": "windows-gcc-x64"
     }
   ],
   "version": 4
