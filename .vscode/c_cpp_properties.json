@@ -9,6 +9,7 @@
         "${workspaceFolder}/Logic/HistorialManager",
         "${workspaceFolder}/DataStructures",
         "${workspaceFolder}/interface",
+        "${workspaceFolder}/Logic/ProductoManager",
 
         // 🔽 Agrega estos para Qt
         "C:/Qt/6.9.1/mingw_64/include",
