@@ -6,4 +6,4 @@
 
     void RecomendacionesPorPreferencias(Preferencia* preferencias, Producto* catalogo);
 
-#endif // DATASTRUCTURES_COLA_H
+#endif 

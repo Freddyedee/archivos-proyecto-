@@ -1,49 +1,46 @@
 #include "ListaEnlazadaPreferencias.h"
 #include <iostream>
 
-void AgregarPreferencia(Preferencia* preferencia){
+void AgregarPreferencia(Preferencia*& cabeza, const std::string& tipo, const std::string& valor) {
+    // if (buscarPreferencia(cabeza, tipo, valor)) return;
 
-    // if (buscarPreferencia(cabeza, tipo, valor)) return; 
+    Preferencia* nuevo = new Preferencia{tipo, valor, nullptr};
 
-    Preferencia* nuevo = new Preferencia{preferencia->tipo, preferencia->valor,nullptr}; // Se inicializa el struct de preferencia, se pasa los valores de tipo y valor, siguente = nullptr ;
-    
-    if(!preferencia->siguiente){
-        preferencia->siguiente = nuevo; 
-    }
-    else{
-        Preferencia* actual = preferencia->siguiente; 
-        while(actual -> siguiente) {
-            actual = actual->siguiente;  
+    if (!cabeza) {
+        cabeza = nuevo;
+    } else {
+        Preferencia* actual = cabeza;
+        while (actual->siguiente) {
+            actual = actual->siguiente;
         }
-        actual->siguiente = nuevo;
-    }    
-    
-}; 
+        actual->siguiente = nuevo; // Solo aquí enlazamos el nuevo nodo
+    }
+}
 
-void mostrarPreferencias(Preferencia* preferencia){
+void mostrarPreferencias(const Preferencia* cabeza){
 
-    const Preferencia* actual = preferencia->siguiente; 
+    const Preferencia* actual = cabeza; 
     while(actual){
         std::cout << actual->tipo << ": " << actual -> valor << std::endl; 
         actual = actual->siguiente; 
     }
 } ; 
 
-void LiberarPreferencias(Preferencia* preferencia){
+void LiberarPreferencias(Preferencia*& cabeza){
     
-    while(preferencia->siguiente){
-        Preferencia* temp = preferencia->siguiente; 
-        preferencia->siguiente = preferencia->siguiente ->siguiente; 
+   while(cabeza){
+        Preferencia* temp = cabeza; 
+        cabeza = cabeza ->siguiente; 
         delete temp; 
     }
-    preferencia->siguiente = nullptr; 
+    cabeza = nullptr; 
 }; 
 
-bool buscarPreferencia(Preferencia* preferencia){
+bool buscarPreferencia(const Preferencia* cabeza, const std::string& tipo, const std::string& valor){
 
-    const Preferencia* actual = preferencia->siguiente; 
+    const Preferencia* actual = cabeza; 
     while(actual){
-        if(actual->tipo == preferencia->tipo && actual->valor == preferencia->valor){
+        if(actual->tipo == tipo && actual->valor == valor){
             return true;
             actual = actual ->siguiente;  
         }
@@ -51,19 +48,19 @@ bool buscarPreferencia(Preferencia* preferencia){
     return false; 
 } 
 
-bool EliminarPreferencia(Preferencia* preferencia){
+bool EliminarPreferencia(Preferencia*& cabeza, const std::string& tipo, const std::string& valor){
 
-    Preferencia* actual = preferencia->siguiente; 
+    Preferencia* actual = cabeza; 
     Preferencia* anterior = nullptr;
 
     while(actual){
 
-        if(actual ->tipo == preferencia->tipo && actual->valor == preferencia->valor){
+        if(actual ->tipo == tipo && actual->valor == valor){
             if(anterior){
                 anterior -> siguiente = actual -> siguiente; 
             }
             else{
-                preferencia->siguiente = actual -> siguiente; 
+                cabeza = actual -> siguiente; 
             }
 
             delete actual; 
@@ -76,10 +73,10 @@ bool EliminarPreferencia(Preferencia* preferencia){
     return false; 
 }
 
-int ContarPreferencias(Preferencia* preferencia){
+int ContarPreferencias(const Preferencia* cabeza){
 
     int contador =0 ; 
-    const Preferencia* actual = preferencia->siguiente; 
+    const Preferencia* actual = cabeza; 
     while(actual){
         contador ++; 
         actual = actual ->siguiente; 

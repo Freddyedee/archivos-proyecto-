@@ -1,8 +1,8 @@
 #include <iostream>
 #include "ListaEnlazadaProductos.h"
 
-void AgregarProductos(Producto*& cabeza, int id, const std::string &descripcion,
-const std::string& marca, float precio, int calidad, const std::string& categoria){
+void AgregarProductos(Producto*& cabeza, const std::string& descripcion, const std::string& marca,
+                      const std::string& categoria, int id, float precio, int calidad){
 
     Producto *nuevo = new Producto {descripcion, marca,categoria,id,precio, calidad, nullptr};
 
@@ -13,8 +13,8 @@ const std::string& marca, float precio, int calidad, const std::string& categori
         
         while(actual->siguiente){
             actual = actual->siguiente; 
-            actual ->siguiente = nuevo; 
         }
+        actual->siguiente = nuevo;
     }
 };
 

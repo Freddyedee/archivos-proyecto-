@@ -11,4 +11,4 @@ void LimpiarHistorial(Historial* historialusuario);
 void RecomendacionesPorHistorial(Historial* historialusuario);*/
 
 
-#endif // CORE_HISTORIAL_H
+#endif 
