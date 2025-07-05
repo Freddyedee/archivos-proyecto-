@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -IC:/Users/usuario/Documents/GitHub/archivos-proyecto-/test/../Core -IC:/Users/usuario/Documents/GitHub/archivos-proyecto-/test/../DataStructures -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\test.dir\\test.cpp.obj -c C:\\Users\\usuario\\Documents\\GitHub\\archivos-proyecto-\\test\\test.cpp",
+  "file": "C:/Users/usuario/Documents/GitHub/archivos-proyecto-/test/test.cpp",
+  "output": "C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build/CMakeFiles/test.dir/test.cpp.obj"
+},
+{
+  "directory": "C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -IC:/Users/usuario/Documents/GitHub/archivos-proyecto-/test/../Core -IC:/Users/usuario/Documents/GitHub/archivos-proyecto-/test/../DataStructures -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\test.dir\\C_\\Users\\usuario\\Documents\\GitHub\\archivos-proyecto-\\DataStructures\\ArbolBinarioBusqueda.cpp.obj -c C:\\Users\\usuario\\Documents\\GitHub\\archivos-proyecto-\\DataStructures\\ArbolBinarioBusqueda.cpp",
+  "file": "C:/Users/usuario/Documents/GitHub/archivos-proyecto-/DataStructures/ArbolBinarioBusqueda.cpp",
+  "output": "C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build/CMakeFiles/test.dir/C_/Users/usuario/Documents/GitHub/archivos-proyecto-/DataStructures/ArbolBinarioBusqueda.cpp.obj"
+}
+]

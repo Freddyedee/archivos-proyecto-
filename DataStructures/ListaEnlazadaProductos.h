@@ -4,8 +4,7 @@
 #include "../Core/Productos.h"
 
 
-void AgregarProductos(Producto*& cabeza, const std::string& descripcion, const std::string& marca,
-                      const std::string& categoria, int id, float precio, int calidad);
+void AgregarProductos(Producto*& cabeza, const Producto& producto);
 
 void MostrarProductos(const Producto* cabeza); 
 Producto* BuscarProductoID(Producto* cabeza, int id); 

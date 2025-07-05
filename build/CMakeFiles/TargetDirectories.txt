@@ -1,0 +1,3 @@
+C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build/CMakeFiles/test.dir
+C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build/CMakeFiles/edit_cache.dir
+C:/Users/usuario/Documents/COSAS UNI/proyectos/TPII/PROYECTO MAIN/archivos-proyecto-/build/CMakeFiles/rebuild_cache.dir

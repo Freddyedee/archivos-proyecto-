@@ -1,5 +1,5 @@
 #include "ProductoManager.h"
-#include "../../DataStructures/ListaEnlazadaProductos.h"
+#include <iostream>
 
 
 // Función para registrar productos y devolver la cabeza de la lista
@@ -33,11 +33,36 @@ Producto* RegistrarProducto() {
     return cabeza;
 }
 
+
+// Función para mostrar la lista de productos
+void MostrarProductos(Producto* cabeza) {
+    Producto* temp = cabeza;
+    while (temp != nullptr) {
+        std::cout << "ID: " << temp->id
+                  << ", Descripcion: " << temp->descripcion
+                  << ", Marca: " << temp->marca
+                  << ", Categoria: " << temp->categoria
+                  << ", Precio: $" << temp->precio
+                  << ", Calidad: " << temp->calidad << std::endl;
+        temp = temp->siguiente;
+    }
+}
+
+// Función para liberar memoria
+void LiberarProductos(Producto*& cabeza) {
+    while (cabeza != nullptr) {
+        Producto* temp = cabeza;
+        cabeza = cabeza->siguiente;
+        delete temp;
+    }
+}
+
 int main() {
     Producto* listaProductos = RegistrarProducto();
 
+    std::cout << "Lista de productos registrados:\n";
     MostrarProductos(listaProductos);
 
-    // Liberar memoria después...
     LiberarProductos(listaProductos);
+    return 0;
 }

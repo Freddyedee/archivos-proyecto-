@@ -1,7 +1,20 @@
 #include <iostream>
 #include "ListaEnlazadaProductos.h"
 
-void AgregarProductos(Producto*& cabeza, const std::string& descripcion, const std::string& marca,
+
+void AgregarProductos(Producto*& cabeza, const Producto& producto) {
+    Producto* nuevo = new Producto;
+    *nuevo = producto;  // Copia el producto
+    nuevo->siguiente = cabeza;  // Lo agrega al principio de la lista
+    cabeza = nuevo;  // Actualiza la cabeza de la lista
+}
+
+
+
+
+
+
+/*void AgregarProductos(Producto*& cabeza, const std::string& descripcion, const std::string& marca,
                       const std::string& categoria, int id, float precio, int calidad){
 
     Producto *nuevo = new Producto {descripcion, marca,categoria,id,precio, calidad, nullptr};
@@ -16,7 +29,7 @@ void AgregarProductos(Producto*& cabeza, const std::string& descripcion, const s
         }
         actual->siguiente = nuevo;
     }
-};
+};*/
 
 void MostrarProductos(const Producto* cabeza){
     

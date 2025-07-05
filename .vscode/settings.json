@@ -62,7 +62,10 @@
         "random": "cpp",
         "fstream": "cpp",
         "sstream": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "numbers": "cpp"
     },
     "cmake.sourceDirectory": "C:/Users/usuario/Documents/GitHub/archivos-proyecto-/test"
 }
